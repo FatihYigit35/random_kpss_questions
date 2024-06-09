@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:random_kpss_questions/app_colors.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class StartScreen extends StatelessWidget {
                 AppColors.primaryColor,
               ),
             ),
-            onPressed: () {},
+            onPressed: startQuiz,
             child: const Text(
               'Testi başlat',
               style: TextStyle(fontSize: 20),

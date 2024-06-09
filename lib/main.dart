@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:random_kpss_questions/app_colors.dart';
 import 'package:random_kpss_questions/quiz.dart';
-import 'package:random_kpss_questions/start_screen.dart';
 
 void main() {
   runApp(const Quiz());
@@ -15,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: AppColors.backgroundColor,
-        body: const StartScreen(),
+        body: const Quiz(),
       ),
     );
   }
