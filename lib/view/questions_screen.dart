@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:random_kpss_questions/answer_button.dart';
-import 'package:random_kpss_questions/app_colors.dart';
+import 'package:random_kpss_questions/custom_widgets/answer_button.dart';
+import 'package:random_kpss_questions/theme/app_colors.dart';
 import 'package:random_kpss_questions/data/questions.dart';
 
 class QuestionsScreen extends StatefulWidget {
-  const QuestionsScreen({super.key});
+  const QuestionsScreen({super.key, required this.onSelectedAnswer});
+
+  final void Function(String answer) onSelectedAnswer;
 
   @override
   State<QuestionsScreen> createState() => _QuestionsScreenState();
@@ -14,7 +17,8 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   var currentQuestionIndex = 0;
 
-  void onClickAnswer() {
+  void onClickAnswer(String answer) {
+    widget.onSelectedAnswer(answer);
     if (currentQuestionIndex < questions.length - 1) {
       setState(() {
         currentQuestionIndex++;
@@ -25,6 +29,8 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
     final currentQuestion = questions[currentQuestionIndex];
+    final answers = List.of(currentQuestion.answers);
+    answers.shuffle();
 
     return MaterialApp(
       home: Scaffold(
@@ -48,10 +54,20 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                 const SizedBox(
                   height: 30,
                 ),
-                ...currentQuestion.answers.map(
-                  (answer) => AnswerButton(
-                    text: answer,
-                    onClick: onClickAnswer,
+                ...answers.map(
+                  (answer) => Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      AnswerButton(
+                        text: answer,
+                        onClick: () {
+                          onClickAnswer(answer);
+                        },
+                      ),
+                      const SizedBox(
+                        height: 4,
+                      )
+                    ],
                   ),
                 ),
               ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:random_kpss_questions/app_colors.dart';
+import 'package:random_kpss_questions/theme/app_colors.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz, {super.key});

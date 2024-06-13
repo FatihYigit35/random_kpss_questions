@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:random_kpss_questions/app_colors.dart';
-import 'package:random_kpss_questions/quiz.dart';
+import 'package:random_kpss_questions/theme/app_colors.dart';
+import 'package:random_kpss_questions/view/quiz.dart';
 
 void main() {
   runApp(const Quiz());
