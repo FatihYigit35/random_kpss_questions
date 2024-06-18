@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:random_kpss_questions/custom_widgets/answer_button.dart';
-import 'package:random_kpss_questions/theme/app_colors.dart';
 import 'package:random_kpss_questions/data/questions.dart';
 
 class QuestionsScreen extends StatefulWidget {
@@ -32,47 +31,53 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     final answers = List.of(currentQuestion.answers);
     answers.shuffle();
 
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: AppColors.backgroundColor,
-        body: SizedBox(
-          width: double.infinity,
-          child: Container(
-            margin: const EdgeInsets.all(40),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Text(
-                  currentQuestion.text,
-                  style: GoogleFonts.openSans(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                ...answers.map(
-                  (answer) => Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      AnswerButton(
-                        text: answer,
-                        onClick: () {
-                          onClickAnswer(answer);
-                        },
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      )
-                    ],
-                  ),
-                ),
-              ],
+    return SizedBox(
+      width: double.infinity,
+      child: Container(
+        margin: const EdgeInsets.all(40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              '${(currentQuestionIndex + 1).toString()}. Soru:',
+              style: GoogleFonts.openSans(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
             ),
-          ),
+            const SizedBox(
+              height: 30,
+            ),
+            Text(
+              currentQuestion.text,
+              style: GoogleFonts.openSans(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            ...answers.map(
+              (answer) => Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  AnswerButton(
+                    text: answer,
+                    onClick: () {
+                      onClickAnswer(answer);
+                    },
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  )
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
