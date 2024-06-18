@@ -1,3 +1,3 @@
-# random_kpss_questions
+# Random Kpss Questions Project
 
-A new Flutter project.
+Flutter is a project I created to improve myself, where I learned about transitions between pages and data transfer.
