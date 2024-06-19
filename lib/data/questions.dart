@@ -2,123 +2,158 @@ import 'package:random_kpss_questions/model/quiz_question.dart';
 
 const questions = [
   QuizQuestion(
-    'What are the main building blocks of Flutter UIs?',
+    '''
+Kast ve kabile bağlılıklarının geniş boyutlarda ve çeşitli düzeylerde görülebildiği Hindistan, ülkenin ---- toplumsal ve kültürel yapısındaki bezdirici düzensizliğe ---- için çok yönlü bir siyasi yapı geliştirmek zorunda kalmıştır.
+
+Bu cümlede boş bırakılan yerlere sırasıyla aşağıdakilerden hangisi getirilmelidir?''',
     [
-      'Widgets',
-      'Components',
-      'Blocks',
-      'Functions',
+      'karmaşık - çözüm bulabilmek',
+      'sorunlu - ivme kazandırabilmek ',
+      'katmanlı - katkı sağlayabilmek',
+      'problemli - uyum gösterebilmek',
+      'homojen - son verebilmek',
     ],
-    'Widgets',
+    'karmaşık - çözüm bulabilmek',
   ),
   QuizQuestion(
-    'How are Flutter UIs built?',
+    '''
+Eskiden, biri kuyuya taş atınca kırk kişi o taşı çıkarmaya uğraşırdı oysa şimdi kuyuya bir taş atıldığında insanlar, kuyuyu taşla doldurmak için âdeta birbiriyle yarışır hâle geldi.
+
+Bu cümlede yakınılan durum aşağıdakilerden hangisidir?
+''',
     [
-      'By combining widgets in code',
-      'By combining widgets in a visual editor',
-      'By defining widgets in config files',
-      'By using XCode for iOS and Android Studio for Android',
+      'Eskiden olumsuzlukları gidermek için çaba gösterenlerin zamanla duyarsızlaşmasından',
+      'Zaman geçtikçe başka insanlara karşı beslenen olumsuz duyguların derinleşmesinden',
+      'İnsanların geçmişte düzeltmeye çalıştıkları olumsuzlukların bugün bir parçası olmalarından ',
+      'Toplumsal değerlerden uzaklaşan bireylerin günümüzde kendilerine yabancılaşmalarından',
+      'İnsanların kendileriyle ilgili olmayan durumlara karşı kayıtsızlıklarının giderek artmasından ',
     ],
-    'By combining widgets in code',
+    'İnsanların geçmişte düzeltmeye çalıştıkları olumsuzlukların bugün bir parçası olmalarından ',
   ),
   QuizQuestion(
-    'What\'s the purpose of a StatefulWidget?',
+    '''
+Toplumsal yapı, sürekli bir gelişim ve değişim içindedir. Bu gelişim ve değişim süreci içinde insanların birbirine yabancılaşmaması, kuşakların kopmaması, kişilerin kimi değer yargılarında birleşmesiyle mümkündür. Bu değer yargıları­ nın tanımlanmasında yazılı ve basılı kaynakların önemli bir yeri vardır. Bireyleri bu kaynaklara götüren, onlardan yararlanmalarını sağlayan bir araçtır okuma.
+
+Bu parçadan aşağıdakilerden hangisine ula­şılamaz?''',
     [
-      'Update UI as data changes',
-      'Update data as UI changes',
-      'Ignore data changes',
-      'Render UI that does not depend on data',
+      'Okumanın, okuyucuyu, insanı ve çağları tanımaya yönelik kaynaklara götürdüğüne',
+      'Toplumsal yapının sürekli gelişme ve değiş­me gösterdiğine',
+      'Gelişim ve değişimlerin, İnsanları birbirine yabancılaştırdığına',
+      'İnsanların ortak değerlerde birleşerek yabancılaşmadan kurtulabileceğine',
+      'Yazılı ve basılı kaynaklardaki bazı bilgilerin, insanı yanıltabileceğine',
     ],
-    'Update UI as data changes',
+    'Yazılı ve basılı kaynaklardaki bazı bilgilerin, insanı yanıltabileceğine',
   ),
   QuizQuestion(
-    'Which widget should you try to use more often: StatelessWidget or StatefulWidget?',
+    'Aşağıdaki cümlelerin hangisinde işi yapan belli değildir?',
     [
-      'StatelessWidget',
-      'StatefulWidget',
-      'Both are equally good',
-      'None of the above',
+      'Bu haberi alınca çok üzülmüş.',
+      'Bugün programda konu tartışmaya açıldı.',
+      'Sınavı kazandığını duyunca çok sevindi.',
+      'Arkadaşı gelecek diye hazırlandı.',
+      'Yeni alman eşyaları salona yerleştirdiler. ',
     ],
-    'StatelessWidget',
+    'Bugün programda konu tartışmaya açıldı.',
   ),
   QuizQuestion(
-    'What happens if you change data in a StatelessWidget?',
+    'İki doğal sayının toplamı 20 olduğuna göre, çarpımları en az kaç olabilir?',
     [
-      'The UI is not updated',
-      'The UI is updated',
-      'The closest StatefulWidget is updated',
-      'Any nested StatefulWidgets are updated',
+      '100',
+      '91',
+      '36',
+      '19',
+      '0',
     ],
-    'The UI is not updated',
+    '0',
   ),
   QuizQuestion(
-    'How should you update data inside of StatefulWidgets?',
+    'İki basamaklı rakamları birbirinden farklı bir sayının değeri rakamları toplamının 4 katıdır.',
     [
-      'By calling setState()',
-      'By calling updateData()',
-      'By calling updateUI()',
-      'By calling updateState()',
+      '6',
+      '4',
+      '3',
+      '2',
+      '1',
     ],
-    'By calling setState()',
+    '4',
   ),
   QuizQuestion(
-    'What are the main building blocks of Flutter UIs?',
+    '''
+140 kg fasulye, 80 kg mercimek, 104 kg nohut birbirine karıştırılmadan artmayacak şekilde eşit ağırlıktaki torbalarla paylaştırılmak isteniyor.
+
+Buna göre, en az kaç torba gereklidir?''',
     [
-      'Widgets',
-      'Components',
-      'Blocks',
-      'Functions',
+      '101',
+      '81',
+      '61',
+      '55',
+      '45',
     ],
-    'Widgets',
+    '81',
   ),
   QuizQuestion(
-    'How are Flutter UIs built?',
+    '''
+8 işçi günde 9 saat çalışarak 20 m2 halıyı 6 günde dokuyor.
+
+Aynı kapasite 3 işçi günde 12 saat çalışarak 15 m2 halıyı kaç günde dokur?''',
     [
-      'By combining widgets in code',
-      'By combining widgets in a visual editor',
-      'By defining widgets in config files',
-      'By using XCode for iOS and Android Studio for Android',
+      '2',
+      '4',
+      '6',
+      '9',
+      '18',
     ],
-    'By combining widgets in code',
+    '9',
   ),
   QuizQuestion(
-    'What\'s the purpose of a StatefulWidget?',
+    'İslamiyet öncesi dönemde Türklerin, hayvancılıkla uğraşması öncelikle aşağıdakilerden hangisinin gelişmesinde etkili olmuş­tur?',
     [
-      'Update UI as data changes',
-      'Update data as UI changes',
-      'Ignore data changes',
-      'Render UI that does not depend on data',
+      'Maden İşlemeciliğinin',
+      'Tarımsal faaliyetlerin',
+      'Dokumacılığın',
+      'Silah yapımının',
+      'Balbal yapımının',
     ],
-    'Update UI as data changes',
+    'Dokumacılığın',
   ),
   QuizQuestion(
-    'Which widget should you try to use more often: StatelessWidget or StatefulWidget?',
+    '''
+İslamiyet öncesi dönemde askeri teşkilatın oldukça güçlü olduğu Türk toplumlarında, çocuklar küçük yaştan itibaren iyi birer binici ve okçu olarak yetiştirilirdi. Askerlik ayrı bir meslek olmayıp eli silah tutan herkes ordunun personeli sayılırdı.
+
+Yalnızca bu duruma göre Türklerle ilgili olarak;
+
+I. Ordu-millet anlayışı görülmüştür.
+II. Sosyal sınıf farklılıkları ortaya çıkmıştır.
+III. Dinsel inanışları güçlüdür.''',
     [
-      'StatelessWidget',
-      'StatefulWidget',
-      'Both are equally good',
-      'None of the above',
+      'Yalnız I',
+      'Yalnız II',
+      'Yalnız III',
+      'I ve II',
+      'II ve III',
     ],
-    'StatelessWidget',
+    'Yalnız I',
   ),
   QuizQuestion(
-    'What happens if you change data in a StatelessWidget?',
+    'Ahi teşkilatları aşağıdakilerden hangisinin gelişmesinde etkili olmamıştır?',
     [
-      'The UI is not updated',
-      'The UI is updated',
-      'The closest StatefulWidget is updated',
-      'Any nested StatefulWidgets are updated',
+      'Kalifiye eleman yetiştirilmesinde',
+      'Üretilen ürünlerin kaliteli olmasında',
+      'Dokumacılık sanatında',
+      'Esnaflar arası dayanışmada',
+      'Denizciliğin gelişmesinde',
     ],
-    'The UI is not updated',
+    'Denizciliğin gelişmesinde',
   ),
   QuizQuestion(
-    'How should you update data inside of StatefulWidgets?',
+    'Türkiye’deki kıyı bölgeleri düşünüldüğünde aşağıdaki özelliklerden hangisi bu bölgelerin denize göre konumundan etkilenmez?',
     [
-      'By calling setState()',
-      'By calling updateData()',
-      'By calling updateUI()',
-      'By calling updateState()',
+      'Yağış düzeni',
+      'Yaşam biçimi',
+      'Sıcaklık düzeni',
+      'Yer altı zenginlikleri',
+      'Tarımsal etkinlikleri',
     ],
-    'By calling setState()',
+    'Yer altı zenginlikleri',
   ),
 ];
