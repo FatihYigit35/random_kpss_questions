@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:random_kpss_questions/data/questions.dart';
+import 'package:random_kpss_questions/model/summary_data.dart';
 import 'package:random_kpss_questions/theme/app_colors.dart';
 import 'package:random_kpss_questions/view/questions_summary.dart';
 
@@ -10,17 +11,17 @@ class ResultScreen extends StatelessWidget {
   final List<String> chosenAnswers;
   final void Function() onRestartTest;
 
-  List<Map<String, Object>> getSummaryData() {
-    final List<Map<String, Object>> summary = [];
+  List<SummaryData> getSummaryData() {
+    final List<SummaryData> summary = [];
 
     for (var i = 0; i < chosenAnswers.length; i++) {
       summary.add(
-        {
-          'question_index': i,
-          'question': questions[i].text,
-          'correct_answer': questions[i].correctAnswer,
-          'user_answer': chosenAnswers[i],
-        },
+        SummaryData(
+          i,
+          questions[i].text,
+          questions[i].correctAnswer,
+          chosenAnswers[i],
+        ),
       );
     }
 
@@ -32,7 +33,7 @@ class ResultScreen extends StatelessWidget {
     final summaryData = getSummaryData();
     final totalQuestions = questions.length;
     final correctQuestions = summaryData
-        .where((data) => data['user_answer'] == data['correct_answer'])
+        .where((data) => data.userAnswer == data.correctAnswer)
         .length;
     return SizedBox(
       width: double.infinity,

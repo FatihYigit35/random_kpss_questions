@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:random_kpss_questions/model/summary_data.dart';
 
 class QuestionsSummary extends StatelessWidget {
   const QuestionsSummary({super.key, required this.summaryData});
 
-  final List<Map<String, Object>> summaryData;
+  final List<SummaryData> summaryData;
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +28,13 @@ class QuestionsSummary extends StatelessWidget {
                           Container(
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: getColorQuestion(data['correct_answer'] ==
-                                  data['user_answer']),
+                              color: getColorQuestion(
+                                  data.correctAnswer == data.userAnswer),
                             ),
                             width: 30,
                             padding: const EdgeInsets.all(4),
                             child: Text(
-                              ((data['question_index'] as int) + 1).toString(),
+                              ((data.index) + 1).toString(),
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
@@ -49,20 +50,18 @@ class QuestionsSummary extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  data['question'] as String,
+                                  data.question,
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
                                   ),
                                 ),
+                                Text('Doğru cevap: \n${data.correctAnswer}'),
                                 Text(
-                                    'Doğru cevap: \n${data['correct_answer'] as String}'),
-                                Text(
-                                  'Cevabınız: \n${data['user_answer'] as String}',
+                                  'Cevabınız: \n${data.userAnswer}',
                                   style: TextStyle(
                                     color: getColorQuestion(
-                                        data['correct_answer'] ==
-                                            data['user_answer']),
+                                        data.correctAnswer == data.userAnswer),
                                   ),
                                 ),
                               ],
