@@ -56,9 +56,9 @@ class QuestionsSummary extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                    'Doğru cevap: ${data['correct_answer'] as String}'),
+                                    'Doğru cevap: \n${data['correct_answer'] as String}'),
                                 Text(
-                                  'Cevabınız: ${data['user_answer'] as String}',
+                                  'Cevabınız: \n${data['user_answer'] as String}',
                                   style: TextStyle(
                                     color: getColorQuestion(
                                         data['correct_answer'] ==
