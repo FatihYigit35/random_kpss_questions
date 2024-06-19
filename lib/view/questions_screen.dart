@@ -35,49 +35,51 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
       width: double.infinity,
       child: Container(
         margin: const EdgeInsets.all(40),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              '${(currentQuestionIndex + 1).toString()}. Soru:',
-              style: GoogleFonts.openSans(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                '${(currentQuestionIndex + 1).toString()}. Soru:',
+                style: GoogleFonts.openSans(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Text(
-              currentQuestion.text,
-              style: GoogleFonts.openSans(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+              const SizedBox(
+                height: 30,
               ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            ...answers.map(
-              (answer) => Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  AnswerButton(
-                    text: answer,
-                    onClick: () {
-                      onClickAnswer(answer);
-                    },
-                  ),
-                  const SizedBox(
-                    height: 8,
-                  )
-                ],
+              Text(
+                currentQuestion.text,
+                style: GoogleFonts.openSans(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
               ),
-            ),
-          ],
+              const SizedBox(
+                height: 30,
+              ),
+              ...answers.map(
+                (answer) => Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    AnswerButton(
+                      text: answer,
+                      onClick: () {
+                        onClickAnswer(answer);
+                      },
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
