@@ -76,7 +76,7 @@ class ResultScreen extends StatelessWidget {
                   AppColors.primaryColor,
                 ),
               ),
-              child: const Text('Yeni sorular ile testi yeniden başlat'),
+              child: const Text('Testi yeniden başlat'),
             )
           ],
         ),
